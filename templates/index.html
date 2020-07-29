@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Text Utilizer</title>
+</head>
+
+<body  class="bg-dark">
+    <div class="container center_div">
+        <h1 class="text-light">ENTER YOUR TEXT BELOW </h1>
+        <form action='/analyze' method='post'>{% csrf_token%}
+<!--            Cross Site Request Forgery protection-->
+
+            <div class="form-group ">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea name='text' style='margin: 0px; width: 721px; height: 93px;' class="form-control"
+                    id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+
+            <h4 class="text-light">Select only one option to get the desired results</h4>
+
+            <div class="form-check">
+                <label class="form-check-label text-light">
+                    <input type="checkbox" class="form-check-input" name="removepunctuation">Remove Punctuation
+                </label>
+            </div>
+
+
+            <div class="form-check">
+                <label class="form-check-label text-light">
+                    <input type="checkbox" class="form-check-input " name="countcharcters">Count Charcters
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label text-light">
+                    <input type="checkbox" class="form-check-input" name="removespaces" >Remove Extra Spaces
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label text-light">
+                    <input type="checkbox" class="form-check-input" name="capitalizefirstletter" >Capitalize first letter
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label text-light">
+                    <input type="checkbox" class="form-check-input" name="capitalizewholeparagraph">Capitalize whole paragraph
+                </label>
+            </div>
+            <button type="submit"  class="btn btn-primary mb-2 my-4">Submit Text</button>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
