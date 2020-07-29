@@ -12,7 +12,7 @@ It is a simple django project or website in which we can Analyze text.
 4) Extra Spaces Remover
 5) Count characters
 
-More functionalities be added in future
+More functionalities will be added in future
 
 # Technologies used
 1) Python
