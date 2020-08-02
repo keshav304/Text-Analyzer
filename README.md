@@ -5,7 +5,7 @@ It is a simple django project or website in which we can Analyze text.
 
 
 
-# What Can We do from textutils ?
+# What Can We do from Analyzer ?
 1) Remove Punctuations
 2) Change whole text to upparcase
 3) Capitalize the paragraph
